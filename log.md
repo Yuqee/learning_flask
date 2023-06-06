@@ -27,6 +27,7 @@ def index(name):
 ```
 5. Both of them will work and the result is like the following. **Notice** that `Kaiqi` is the *value* in *variable* `name` and the last word in the *URL*. `git commit -m 'd01v02--add placeholder`
 <img src="./imgs/d01v02.png" alt="img" style="zoom:33%;" />
+
 ### Two ways to run *flask*
 1. `flask run`
 2. **Debug mode:**don't need to type *control+C* every time you make a change. Very useful, error will be reported in *terminal* or *web browser* :
