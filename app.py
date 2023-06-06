@@ -16,4 +16,4 @@ def form():
 
 @app.route('/home/<name>/<loc>')
 def home(name, loc):
-    return f'<h1>Hello {name}, form {loc}.<h1>'
+    return render_template('home.html',name=name, loc=loc)
