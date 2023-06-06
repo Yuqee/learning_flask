@@ -17,4 +17,8 @@ def form():
 @app.route('/home/<name>/<loc>')
 def home(name, loc):
     isDisplay = name=='Yuqi'
-    return render_template('home.html',name=name, loc=loc, isDisplay = isDisplay)
+    return render_template('home.html',
+                           name=name, 
+                           loc=loc, 
+                           isDisplay=isDisplay,
+                           menu=['Noodle', 'Rice', 'Burger', 'Steak'])

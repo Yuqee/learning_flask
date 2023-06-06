@@ -73,6 +73,11 @@ def home(name, loc):
     return f'<h1>Hello {name}, form {loc}.<h1>'
 ```
 #### Templates with variables: Similar as in Intro, home is a template with variable now
-`git commit -m 'd02v02--read in form, redirect and template with variables'`
+1. `git commit -m 'd02v02--read in form, redirect and template with variables'`
+2. Powered by *Jinja*
 #### Templates with conditional
-`git commit -m 'd02v03--read in form, redirect and template with conditional'`
+1. `git commit -m 'd02v03--read in form, redirect and template with conditional'`
+2. Powered by *Jinja*
+#### Templates with loop
+1. `git commit -m 'd02v04--read in form, redirect and template with loop'`
+2. Powered by *Jinja*

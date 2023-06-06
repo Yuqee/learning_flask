@@ -14,5 +14,11 @@
     {% else %}
     <h1>You are not Yuqi. We love {{ name }} as well.</h1>
     {% endif %}
+
+    <h2>You can choose</h2>
+    {% for dish in menu %}
+    <li>{{ dish }}</li>
+    {% endfor %}
+    <h2>to eat tonight</h2>
 </body>
 </html>
