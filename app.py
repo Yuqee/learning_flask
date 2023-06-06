@@ -16,4 +16,5 @@ def form():
 
 @app.route('/home/<name>/<loc>')
 def home(name, loc):
-    return render_template('home.html',name=name, loc=loc)
+    isDisplay = name=='Yuqi'
+    return render_template('home.html',name=name, loc=loc, isDisplay = isDisplay)

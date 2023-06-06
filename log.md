@@ -74,3 +74,5 @@ def home(name, loc):
 ```
 #### Templates with variables: Similar as in Intro, home is a template with variable now
 `git commit -m 'd02v02--read in form, redirect and template with variables'`
+#### Templates with conditional
+`git commit -m 'd02v03--read in form, redirect and template with conditional'`

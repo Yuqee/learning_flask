@@ -8,5 +8,11 @@
 </head>
 <body>
     <h1>Hello, {{ name }}. You are from {{ loc }}.</h1>
+
+    {% if isDisplay %}
+    <h1>You are Yuqi! We love Yuqi.</h1>
+    {% else %}
+    <h1>You are not Yuqi. We love {{ name }} as well.</h1>
+    {% endif %}
 </body>
 </html>
