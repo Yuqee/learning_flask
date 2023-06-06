@@ -86,4 +86,4 @@ def home(name, loc):
 2. *block* is placeholder for *Child* template in *Jinja*
 3. `git commit -m 'd02v05--read in form, redirect and template with inheritance'`
 #### Include templates
-1. `git commit -m 'd02v06--read in form, redirect and template with include'`
+1. `git commit -m 'd02v06--Template with include && clear version of inheritance'`
