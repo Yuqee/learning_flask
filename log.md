@@ -48,10 +48,11 @@ app.config['DEBUG'] = True
 @app.route('/', methods={'POST', 'GET'})
 ```
 ## Date: Jun 6, 2023
-## Chapter 3
+## Chapter 2
 ### Templates
 #### Intro: read in name and location and then redirect to home with name and location value filled in the form page.
 `git commit -m 'd02v01--read in form, redirect and template'`
+
 ```python
 from flask import Flask, render_template, request, redirect, url_for
 
@@ -88,3 +89,16 @@ def home(name, loc):
 3. `git commit -m 'd02v05--read in form, redirect and template with inheritance'`
 #### Include templates
 1. `git commit -m 'd02v06--Template with include && clear version of inheritance'`
+## Date: Jun 11, 2023
+## Chapter 3 
+### Database
+#### Create Database
+1. Create a database
+```bash
+$ sqlite3 data.db
+sqlite> create table users (id integer primary key autoincrement, name text, location text);
+```
+2. See all the existing database: `sqlite> .tables`
+3. Insert new element to database: `sqlite> insert into users (name, location) values ('Fiona', 'HK');`
+4. See all the toples in certain database: `sqlite> select * from users;
+;`
