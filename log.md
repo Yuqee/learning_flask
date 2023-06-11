@@ -139,3 +139,6 @@ db.execute('insert into users (name, location) values (?, ?)', [name, location])
 db.commit()
 ```
 `git commit -m 'd03v03--insert touples'`
+
+#### Show all touples
+`git commit -m 'd03v04--show all touples'`

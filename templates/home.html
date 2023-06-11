@@ -13,11 +13,11 @@ Home
 <h1>You are not Yuqi. We love {{ name }} as well.</h1>
 {% endif %}
 
-<h2>You can choose</h2>
-{% for dish in menu %}
-<li>{{ dish }}</li>
+<h1>Database Results:</h1>
+{% for item in results %}
+<h2>ID: {{ item.id }} Name: {{ item.name }} Location: {{ item.location }}</h2>
 {% endfor %}
-<h2>to eat tonight</h2>
+
 <!-- {{ super() }} is for <p>This belongs to the base.</p> in base.html to show in home.html -->
 {{ super() }}
 {% include 'include.html' %}

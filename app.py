@@ -10,7 +10,7 @@ def connect_db():
     sql.row_factory = sqlite3.Row
     return sql
 
-def get_bd():
+def get_db():
     if not hasattr(g, 'sqlite3'):
         g.sqlite_db = connect_db()
     return g.sqlite_db
@@ -28,7 +28,7 @@ def form():
         name = request.form['name']
         location = request.form['location']
         
-        db = get_bd()
+        db = get_db()
         db.execute('insert into users (name, location) values (?, ?)', [name, location])
         db.commit()
 
@@ -37,15 +37,20 @@ def form():
 @app.route('/home/<name>/<loc>')
 def home(name, loc):
     isDisplay = name=='Yuqi'
+
+    db = get_db()
+    cur = db.execute('select id, name, location from users')
+    results = cur.fetchall()
+
     return render_template('home.html',
                            name=name, 
                            loc=loc, 
                            isDisplay=isDisplay,
-                           menu=['Noodle', 'Rice', 'Burger', 'Steak'])
+                           results=results)
 
 @app.route('/viewresults')
 def viewresults():
-    db = get_bd()
+    db = get_db()
     cur = db.execute('select id, name, location from users')
     results = cur.fetchall()
     # return '<h1>The ID is {}. The name is {}. The location is {} </h1>'.format(results[0]['id'], results[0]['name'], results[0]['location'])
