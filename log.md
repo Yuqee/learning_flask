@@ -102,3 +102,32 @@ sqlite> create table users (id integer primary key autoincrement, name text, loc
 3. Insert new element to database: `sqlite> insert into users (name, location) values ('Fiona', 'HK');`
 4. See all the toples in certain database: `sqlite> select * from users;
 ;`
+`git commit -m 'd03v01--database created'`
+#### Plug in sqlite to flask
+1. helper functions:
+```python
+def connect_db():
+    sql = sqlite3.connect('./data.db')
+    sql.row_factory = sqlite3.Row
+    return sql
+
+def get_bd():
+    if not hasattr(g, 'sqlite3'):
+        g.sqlite_db = connect_db()
+    return g.sqlite_db
+
+@app.teardown_appcontext
+def close_db(error):
+    if hasattr(g, 'sqlite_db'):
+        g.sqlite_db.close()
+```
+2. Show touples in database:
+```python
+@app.route('/viewresults')
+def viewresults():
+    db = get_bd()
+    cur = db.execute('select id, name, location from users')
+    results = cur.fetchall()
+    return '<h1>The ID is {}. The name is {}. The location is {} </h1>'.format(results[0]['id'], results[0]['name'], results[0]['location'])
+```
+`git commit -m 'd03v02--database plugin and show touples'`
