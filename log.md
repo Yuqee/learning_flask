@@ -131,3 +131,11 @@ def viewresults():
     return '<h1>The ID is {}. The name is {}. The location is {} </h1>'.format(results[0]['id'], results[0]['name'], results[0]['location'])
 ```
 `git commit -m 'd03v02--database plugin and show touples'`
+
+#### Insert touples
+```python
+db = get_bd()
+db.execute('insert into users (name, location) values (?, ?)', [name, location])
+db.commit()
+```
+`git commit -m 'd03v03--insert touples'`

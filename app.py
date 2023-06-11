@@ -27,7 +27,11 @@ def form():
     else:
         name = request.form['name']
         location = request.form['location']
-        print(name, location)
+        
+        db = get_bd()
+        db.execute('insert into users (name, location) values (?, ?)', [name, location])
+        db.commit()
+
         return redirect(url_for('home', name=name, loc=location))
 
 @app.route('/home/<name>/<loc>')
@@ -44,4 +48,6 @@ def viewresults():
     db = get_bd()
     cur = db.execute('select id, name, location from users')
     results = cur.fetchall()
-    return '<h1>The ID is {}. The name is {}. The location is {} </h1>'.format(results[0]['id'], results[0]['name'], results[0]['location'])
+    # return '<h1>The ID is {}. The name is {}. The location is {} </h1>'.format(results[0]['id'], results[0]['name'], results[0]['location'])
+    # return '<h1>The ID is {}. The name is {}. The location is {} </h1>'.format(results[1]['id'], results[1]['name'], results[1]['location'])
+    return '<h1>The ID is {}. The name is {}. The location is {} </h1>'.format(results[2]['id'], results[2]['name'], results[2]['location'])
