@@ -35,6 +35,8 @@ create table food_date (
 `
 sqlite3 food_log.db < food_tracker.sql
 `
-<img src="./imgs/stage3.png" alt="img" style="zoom:33%;" />
+<img src="./imgs/stage2.png" alt="img" style="zoom:33%;" />
 
 5. `git commit -m 'DP1v03-Create database'`
+### Stage 3: Add Food to the page
+1. `git commit -m 'DP1v04-Add food to the page'`
