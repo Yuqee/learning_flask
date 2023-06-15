@@ -40,3 +40,7 @@ sqlite3 food_log.db < food_tracker.sql
 5. `git commit -m 'DP1v03-Create database'`
 ### Stage 3: Add Food to the page
 1. `git commit -m 'DP1v04-Add food to the page'`
+### Stage 4: Add Food to the database
+1. Result:
+<img src="./imgs/stage4.png" alt="img" style="zoom:33%;" />
+2. `git commit -m 'DP1v05-Add food to the database'`
