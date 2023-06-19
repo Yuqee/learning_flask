@@ -44,3 +44,5 @@ sqlite3 food_log.db < food_tracker.sql
 1. Result:
 <img src="./imgs/stage4.png" alt="img" style="zoom:33%;" />
 2. `git commit -m 'DP1v05-Add food to the database'`
+### Stage 5: Add Food to the page from the database
+1. `git commit -m 'DP1v06-Add food to the page from the database'`
