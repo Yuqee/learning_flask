@@ -55,3 +55,5 @@ sqlite3 food_log.db < food_tracker.sql
 ### Stage 9: Total per day on homescreen
 1. `git commit -m 'DP1v10-Total per day on homescreen'`
 2. **Troubeshooting:** error msg: `OperationalError: database is locked`. Kill the app and run again: `flask run`.
+### Stage 10: Add Links between pages
+1. `git commit -m 'DP1v11-Add links between pages'`
