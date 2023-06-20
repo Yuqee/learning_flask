@@ -51,4 +51,7 @@ sqlite3 food_log.db < food_tracker.sql
 ### Stage 7: Food info of certain date
 1. `git commit -m 'DP1v08-Show food info of certian date'`
 ### Stage 8: View detail
-2. `git commit -m 'DP1v09-View detail of certain date'`
+1. `git commit -m 'DP1v09-View detail of certain date'`
+### Stage 9: Total per day on homescreen
+1. `git commit -m 'DP1v10-Total per day on homescreen'`
+2. **Troubeshooting:** error msg: `OperationalError: database is locked`. Kill the app and run again: `flask run`.
