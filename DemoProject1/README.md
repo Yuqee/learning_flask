@@ -46,3 +46,5 @@ sqlite3 food_log.db < food_tracker.sql
 2. `git commit -m 'DP1v05-Add food to the database'`
 ### Stage 5: Add Food to the page from the database
 1. `git commit -m 'DP1v06-Add food to the page from the database'`
+### Stage 6: Do the same with Date
+1. `git commit -m 'DP1v07-Add date to the database and page'`
