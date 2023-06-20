@@ -32,7 +32,7 @@ def index():
         db.execute('insert into log_date (entry_date) values (?)', [database_date])
         db.commit()
 
-    cur = db.execute('select log_date.entry_date, sum(food.protein) as protein, sum(food.carbohydrates) as carbohydrates, sum(food.fat) as fat, sum(food.calories) as calories from log_date join food_date on food_date.log_date_id = log_date.id join food on food.id = food_date.food_id group by log_date.id order by log_date.entry_date desc')
+    cur = db.execute('select log_date.entry_date, sum(food.protein) as protein, sum(food.carbohydrates) as carbohydrates, sum(food.fat) as fat, sum(food.calories) as calories from log_date left join food_date on food_date.log_date_id = log_date.id left join food on food.id = food_date.food_id group by log_date.id order by log_date.entry_date desc')
     results = cur.fetchall()
 
     date_results = []
