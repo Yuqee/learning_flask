@@ -50,3 +50,5 @@ sqlite3 food_log.db < food_tracker.sql
 1. `git commit -m 'DP1v07-Add date to the database and page'`
 ### Stage 7: Food info of certain date
 1. `git commit -m 'DP1v08-Show food info of certian date'`
+### Stage 8: View detail
+2. `git commit -m 'DP1v09-View detail of certain date'`
